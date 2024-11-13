@@ -114,10 +114,10 @@
         <ul class="menu">
             <li><a onclick="toggleInfo('info-abacus')">Estructura y Funcionamiento de la Máquina Abacus</a></li>
             <li><a onclick="toggleInfo('info-super-abacus')">Características de la Máquina Super Abacus</a></li>
-            <li><a href="#arquitectura-von-neumann">Arquitectura de Von Neumann</a></li>
-            <li><a href="#memoria-principal-secundaria">Memoria Principal y Memoria Secundaria</a></li>
-            <li><a href="#unidades-almacenamiento">Unidades de Almacenamiento</a></li>
-            <li><a href="#ciclo-instruccion-procesador">Ciclo de Instrucción del Procesador</a></li>
+            <li><a onclick="toggleInfo('info-von-neumann')">Arquitectura de Von Neumann</a></li>
+            <li><a onclick="toggleInfo('info-memoria')">Memoria Principal y Memoria Secundaria</a></li>
+            <li><a onclick="toggleInfo('info-unidades-almacenamiento')">Unidades de Almacenamiento</a></li>
+            <li><a onclick="toggleInfo('info-ciclo-instruccion')">Ciclo de Instrucción del Procesador</a></li>
             <li><a href="#evaluacion-pruebas">Evaluación y Pruebas</a></li>
             <li><a href="#tendencias-futuras">Tendencias Futuras en la Organización de Computadores</a></li>
         </ul>
@@ -162,4 +162,140 @@
             <h3>3. Diferencias con la Máquina Abacus</h3>
             <ul>
                 <li><strong>Registros múltiples:</strong> Mientras que la Máquina Abacus solo tiene un acumulador, la Super Abacus utiliza varios registros para almacenar y procesar datos.</li>
-                <li><strong>Mayor capacidad de direccionamiento:</strong> La Máquina Super Abacus puede direccionar múltiples ubicaciones de memoria al mismo tiempo, lo que mejora la
+                <li><strong>Mayor capacidad de direccionamiento:</strong> La Máquina Super Abacus puede direccionar múltiples ubicaciones de memoria al mismo tiempo, lo que mejora la eficiencia de los cálculos.</li>
+                <li><strong>Mayor rapidez en el ciclo de memoria:</strong> Gracias a la mejora en la organización de los registros y el bus de datos, la Super Abacus puede realizar operaciones más rápidas que su predecesora.</li>
+            </ul>
+        </div>
+
+        <!-- Información desplegable para "Arquitectura de Von Neumann" -->
+        <div id="info-von-neumann" class="info">
+            <h2>Arquitectura de Von Neumann</h2>
+            <p>La arquitectura de Von Neumann, propuesta por el matemático John von Neumann, es la base de la mayoría de las computadoras modernas. Esta arquitectura se basa en un modelo de computadora en el que los programas y los datos comparten la misma memoria. Se utiliza una sola unidad para almacenar tanto las instrucciones como los datos, lo que facilita la ejecución de programas secuenciales y el almacenamiento de información.</p>
+            <h3>1. Componentes Principales</h3>
+            <ul>
+                <li><strong>Unidad Central de Procesamiento (CPU):</strong> Es el componente encargado de ejecutar las instrucciones del programa.</li>
+                <li><strong>Memoria:</strong> Almacena tanto las instrucciones como los datos. La memoria está organizada de manera secuencial, lo que permite un acceso rápido a los datos.</li>
+                <li><strong>Dispositivo de Entrada/Salida (E/S):</strong> Permite la comunicación entre la computadora y el usuario o con otros sistemas.</li>
+                <li><strong>Unidad de Control:</strong> Controla el flujo de las instrucciones y los datos dentro de la CPU.</li>
+            </ul>
+            <h3>2. Características de la Arquitectura</h3>
+            <ul>
+                <li><strong>Memoria compartida:</strong> Los datos y las instrucciones se almacenan en la misma memoria.</li>
+                <li><strong>Secuencialidad:</strong> Las instrucciones se ejecutan de manera secuencial, una después de la otra, siguiendo el orden en que están almacenadas en la memoria.</li>
+                <li><strong>Uso de registros:</strong> La CPU utiliza registros para almacenar temporalmente los datos que se están procesando.</li>
+            </ul>
+            <h3>3. Desventajas de la Arquitectura de Von Neumann</h3>
+            <ul>
+                <li><strong>Cuello de botella:</strong> Debido a que los datos y las instrucciones comparten la misma memoria, puede haber una limitación en la velocidad de acceso.</li>
+                <li><strong>Falta de paralelismo:</strong> La ejecución de instrucciones se realiza de manera secuencial, lo que puede ser una desventaja frente a arquitecturas más modernas.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Información desplegable para "Memoria Principal y Memoria Secundaria" -->
+        <div id="info-memoria" class="info">
+            <h2>Memoria Principal y Memoria Secundaria</h2>
+            <p>En esta sección, se exploran las diferencias entre la memoria principal y la memoria secundaria, los dos tipos clave de almacenamiento en un sistema informático. Cada uno juega un papel fundamental en el rendimiento y funcionamiento de la computadora.</p>
+            <h3>1. Memoria Principal</h3>
+            <p>La memoria principal, también conocida como RAM (Random Access Memory), es el área de almacenamiento más rápida y directamente accesible para la CPU. Su función principal es almacenar los datos y programas que están siendo procesados por la computadora en un momento dado. Algunas características clave de la memoria principal son:</p>
+            <ul>
+                <li><strong>Volatilidad:</strong> La memoria RAM es volátil, lo que significa que los datos se pierden cuando la computadora se apaga.</li>
+                <li><strong>Alta velocidad:</strong> La RAM tiene tiempos de acceso muy rápidos, lo que permite un procesamiento eficiente y rápido de las tareas.</li>
+                <li><strong>Capacidad limitada:</strong> A pesar de su velocidad, la cantidad de RAM en un sistema suele ser limitada en comparación con el almacenamiento secundario.</li>
+            </ul>
+    
+            <h3>2. Memoria Secundaria</h3>
+            <p>La memoria secundaria se utiliza para almacenar grandes volúmenes de datos de forma permanente. A diferencia de la memoria principal, la memoria secundaria no es volátil, lo que significa que los datos permanecen allí incluso cuando la computadora se apaga. Los dispositivos más comunes de memoria secundaria son los discos duros (HDD), las unidades de estado sólido (SSD) y los discos ópticos. Las principales características de la memoria secundaria incluyen:</p>
+            <ul>
+                <li><strong>No volatilidad:</strong> Los datos no se pierden cuando se apaga el sistema.</li>
+                <li><strong>Baja velocidad:</strong> Aunque los dispositivos de memoria secundaria ofrecen un almacenamiento mucho mayor que la RAM, su velocidad de acceso es más baja.</li>
+                <li><strong>Capacidad mayor:</strong> Los dispositivos de memoria secundaria tienen una capacidad de almacenamiento mucho mayor que la memoria principal, lo que permite almacenar grandes cantidades de información a largo plazo.</li>
+            </ul>
+    
+            <h3>3. Diferencias Clave</h3>
+            <p>Las diferencias más importantes entre la memoria principal y la memoria secundaria son:</p>
+            <ul>
+                <li><strong>Velocidad:</strong> La memoria principal es mucho más rápida que la memoria secundaria.</li>
+                <li><strong>Capacidad:</strong> La memoria secundaria tiene una capacidad mucho mayor que la memoria principal.</li>
+                <li><strong>Persistencia:</strong> La memoria principal es volátil, mientras que la memoria secundaria no lo es.</li>
+            </ul>
+    
+            <h3>4. Impacto en el Rendimiento del Sistema</h3>
+            <p>El rendimiento de un sistema informático depende en gran medida de la memoria principal y secundaria. La cantidad y velocidad de la memoria RAM afecta directamente a la capacidad de la computadora para manejar múltiples tareas simultáneamente. Por otro lado, la memoria secundaria, al ser más lenta, influye en el tiempo que tarda en acceder a los datos almacenados, pero es esencial para el almacenamiento a largo plazo de archivos, programas y otros datos.</p>
+        </div>
+
+         <!-- Información desplegable para "Unidades de Almacenamiento" -->
+        <div id="info-unidades-almacenamiento" class="info">
+            <h2>Unidades de Almacenamiento</h2>
+            <p>Las unidades de almacenamiento son componentes esenciales de cualquier sistema informático, utilizadas para guardar datos de forma permanente o temporal. Existen diversos tipos de unidades de almacenamiento, cada una con características únicas que afectan al rendimiento general de un sistema.</p>
+
+            <h3>1. Discos Duros (HDD)</h3>
+            <p>Los discos duros (HDD - Hard Disk Drives) son dispositivos de almacenamiento que utilizan discos magnéticos giratorios para leer y escribir datos. A pesar de ser más lentos en comparación con las unidades SSD, los discos duros siguen siendo populares debido a su mayor capacidad a un costo menor. Sus principales características incluyen:</p>
+            <ul>
+                <li><strong>Capacidad alta:</strong> Pueden ofrecer grandes capacidades de almacenamiento, ideales para almacenar grandes volúmenes de datos.</li>
+                <li><strong>Velocidad más baja:</strong> El tiempo de acceso a los datos es más lento que en las unidades SSD debido a su naturaleza mecánica.</li>
+                <li><strong>Costo más bajo:</strong> Los discos duros son más asequibles, lo que los convierte en una opción económica para usuarios con necesidades de almacenamiento masivo.</li>
+            </ul>
+
+            <h3>2. Unidades de Estado Sólido (SSD)</h3>
+            <p>Las unidades SSD (Solid State Drives) son dispositivos de almacenamiento basados en memoria flash que no contienen partes móviles, lo que les permite acceder a los datos de manera mucho más rápida que los discos duros. Las principales ventajas de los SSD incluyen:</p>
+            <ul>
+                <li><strong>Velocidad rápida:</strong> Los SSDs ofrecen tiempos de acceso más rápidos, lo que mejora significativamente el rendimiento del sistema, especialmente en el arranque del sistema operativo y la carga de aplicaciones.</li>
+                <li><strong>Menor consumo de energía:</strong> Los SSD consumen menos energía que los HDD, lo que los hace ideales para dispositivos portátiles como laptops.</li>
+                <li><strong>Mayor durabilidad:</strong> Al no tener partes móviles, los SSD son más resistentes a golpes y vibraciones.</li>
+            </ul>
+
+            <h3>3. Discos Ópticos</h3>
+            <p>Los discos ópticos, como los CDs, DVDs y Blu-rays, son medios de almacenamiento que utilizan láseres para leer y escribir datos. Aunque no son tan rápidos ni tienen tanta capacidad como los HDD o SSD, siguen siendo útiles para la distribución de contenido, almacenamiento a largo plazo y copias de seguridad. Sus características incluyen:</p>
+            <ul>
+                <li><strong>Baja capacidad:</strong> Los discos ópticos tienen una capacidad de almacenamiento relativamente baja en comparación con otros medios.</li>
+                <li><strong>Baja velocidad:</strong> La velocidad de acceso y transferencia de datos es mucho más lenta que en los HDD y SSD.</li>
+                <li><strong>Durabilidad a largo plazo:</strong> Aunque más lentos, los discos ópticos son una opción confiable para el almacenamiento a largo plazo debido a su resistencia a las condiciones ambientales.</li>
+            </ul>
+
+            <h3>4. Unidades Flash USB</h3>
+            <p>Las unidades Flash USB son pequeños dispositivos de almacenamiento portátiles que utilizan memoria flash para almacenar datos. Son muy populares debido a su portabilidad y facilidad de uso. Características clave:</p>
+            <ul>
+                <li><strong>Portabilidad:</strong> Son fáciles de transportar y se utilizan comúnmente para transferir archivos entre computadoras.</li>
+                <li><strong>Velocidad variable:</strong> La velocidad de acceso puede variar según la marca y modelo de la unidad.</li>
+                <li><strong>Capacidad moderada:</strong> Aunque ofrecen una capacidad moderada de almacenamiento, no son comparables a los HDD o SSD en términos de tamaño.</li>
+            </ul>
+
+            <h3>5. Impacto en el Rendimiento</h3>
+            <p>La elección de la unidad de almacenamiento tiene un impacto directo en el rendimiento general del sistema. Un SSD, por ejemplo, proporcionará tiempos de arranque más rápidos y acceso más veloz a las aplicaciones en comparación con un HDD. Sin embargo, los discos duros siguen siendo una opción viable para quienes necesitan grandes cantidades de almacenamiento a un costo más bajo. La combinación de una unidad SSD para el sistema operativo y un HDD para almacenamiento masivo es una estrategia comúnmente utilizada para equilibrar velocidad y capacidad.</p>
+        </div>
+
+        <!-- Información desplegable para "Ciclo de Instrucción del Procesador" -->
+    <div id="info-ciclo-instruccion" class="info">
+        <h2>Ciclo de Instrucción del Procesador</h2>
+        <p>El ciclo de instrucción es el proceso fundamental que realiza un procesador para ejecutar un programa. Este ciclo se repite constantemente durante la ejecución de cualquier programa informático, permitiendo que el procesador realice operaciones complejas a partir de simples instrucciones.</p>
+
+        <h3>Fases del Ciclo de Instrucción</h3>
+        <p>El ciclo de instrucción se divide en varias fases clave, cada una de las cuales tiene un papel importante en el procesamiento de las instrucciones. A continuación, se detallan las etapas del ciclo:</p>
+
+        <h4>1. Búsqueda de Instrucción (Fetch)</h4>
+        <p>En esta fase, el procesador obtiene la instrucción que debe ejecutar desde la memoria. La dirección de la instrucción se encuentra almacenada en el contador de programa (PC, Program Counter). El procesador lee la instrucción desde la memoria principal y luego la almacena en el registro de instrucción (IR, Instruction Register) para su posterior procesamiento.</p>
+
+        <h4>2. Decodificación de la Instrucción (Decode)</h4>
+        <p>Una vez que la instrucción ha sido recuperada, el procesador debe entender lo que debe hacer con ella. En esta fase, la instrucción se decodifica, es decir, se identifica el tipo de operación a realizar (como una suma, una carga de datos, etc.) y se identifican los operandos necesarios para llevarla a cabo. Esta etapa suele involucrar unidades de control que organizan los recursos del procesador.</p>
+
+        <h4>3. Ejecución de la Instrucción (Execute)</h4>
+        <p>En la fase de ejecución, el procesador realiza la operación indicada por la instrucción. Esto puede implicar cálculos matemáticos, operaciones lógicas o transferencias de datos entre registros o memoria. El resultado de la operación se almacena en el registro de salida o en la memoria, según sea necesario.</p>
+
+        <h4>4. Acceso a Memoria (Memory Access)</h4>
+        <p>En esta fase, si la instrucción requiere acceder a la memoria (por ejemplo, leer o escribir datos), se realiza la operación de lectura o escritura en la memoria principal. Dependiendo de la instrucción, esto puede implicar cargar datos en registros o guardar resultados en la memoria.</p>
+
+        <h4>5. Escritura de Resultados (Write-back)</h4>
+        <p>Finalmente, en la fase de escritura, el procesador almacena los resultados de la operación en los registros o en la memoria. Esta es la última fase del ciclo, que prepara el procesador para la siguiente instrucción.</p>
+
+        <p>Estas fases se repiten continuamente en un ciclo, lo que permite que el procesador ejecute un conjunto de instrucciones. Cada ciclo puede ejecutarse a una velocidad muy alta, permitiendo que los procesadores modernos realicen millones de operaciones por segundo.</p>
+    </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024. Parcial 3 - Organización de Computadores</p>
+    </footer>
+</body>
+</html>
