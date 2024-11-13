@@ -46,6 +46,39 @@
             backdrop-filter: blur(5px);
         }
 
+        /* Estilos del menú */
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .menu li {
+            margin: 10px 0;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #d47f6a;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .menu li a:hover {
+            color: #ff7043;
+        }
+
+        /* Estilos del contenido desplegable */
+        .info {
+            display: none;
+            text-align: left;
+            font-size: 1rem;
+            color: #333;
+            margin-top: 10px;
+        }
+
         /* Estilos del footer */
         footer {
             background-color: #d47f6a;
@@ -59,6 +92,13 @@
             margin: 0;
         }
     </style>
+    <script>
+        // Función para mostrar y ocultar el contenido al hacer clic
+        function toggleInfo(id) {
+            var info = document.getElementById(id);
+            info.style.display = (info.style.display === "none" || info.style.display === "") ? "block" : "none";
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -69,11 +109,57 @@
     <div class="content">
         <p>Bienvenido a la página del Parcial 3 de Organización de Computadores.</p>
         <p>Aquí encontrarás toda la información y los temas que cubren esta evaluación.</p>
-    </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>Karen Melissa Parada Páez - 01220371059</p>
-    </footer>
-</body>
-</html>
+        <!-- Menú de temas -->
+        <ul class="menu">
+            <li><a onclick="toggleInfo('info-abacus')">Estructura y Funcionamiento de la Máquina Abacus</a></li>
+            <li><a onclick="toggleInfo('info-super-abacus')">Características de la Máquina Super Abacus</a></li>
+            <li><a href="#arquitectura-von-neumann">Arquitectura de Von Neumann</a></li>
+            <li><a href="#memoria-principal-secundaria">Memoria Principal y Memoria Secundaria</a></li>
+            <li><a href="#unidades-almacenamiento">Unidades de Almacenamiento</a></li>
+            <li><a href="#ciclo-instruccion-procesador">Ciclo de Instrucción del Procesador</a></li>
+            <li><a href="#evaluacion-pruebas">Evaluación y Pruebas</a></li>
+            <li><a href="#tendencias-futuras">Tendencias Futuras en la Organización de Computadores</a></li>
+        </ul>
+
+        <!-- Información desplegable para "Estructura y Funcionamiento de la Máquina Abacus" -->
+        <div id="info-abacus" class="info">
+            <h2>Estructura y Funcionamiento de la Máquina Abacus</h2>
+            <p>La Máquina Abacus es un modelo teórico de computadora que se utiliza en la enseñanza de los principios de la informática. Este modelo simula una computadora simple de un solo acumulador, lo que significa que todas las operaciones aritméticas y lógicas se realizan en un único registro, conocido como el acumulador.</p>
+            <h3>1. Estructura de la Máquina Abacus</h3>
+            <ul>
+                <li><strong>Memoria:</strong> Almacena las instrucciones y los datos de manera secuencial.</li>
+                <li><strong>Acumulador:</strong> El registro principal donde se realizan las operaciones.</li>
+                <li><strong>Unidad de Control (UC):</strong> Coordina la ejecución de las instrucciones.</li>
+                <li><strong>Bus de datos:</strong> Permite el movimiento de información entre los componentes.</li>
+            </ul>
+            <h3>2. Funcionamiento de la Máquina Abacus</h3>
+            <p>El funcionamiento de la máquina se basa en una secuencia de operaciones contra el acumulador. Las instrucciones se ejecutan de la siguiente manera:</p>
+            <ul>
+                <li><strong>Carga de datos al acumulador:</strong> La instrucción LOAD permite cargar un valor de la memoria al acumulador.</li>
+                <li><strong>Operaciones aritméticas:</strong> Instrucciones como ADD, SUB, MUL y DIV realizan cálculos usando el acumulador.</li>
+                <li><strong>Almacenamiento de resultados:</strong> El comando STORE guarda el valor del acumulador en la memoria.</li>
+                <li><strong>Control de flujo:</strong> La instrucción JUMP cambia la dirección de ejecución.</li>
+            </ul>
+            <h3>3. Concepto de Operaciones contra el Acumulador</h3>
+            <p>El término operaciones contra el acumulador se refiere a la realización de operaciones directamente en el acumulador. Por ejemplo:</p>
+            <ul>
+                <li><strong>ADD X:</strong> Suma el valor de la posición X de la memoria al acumulador.</li>
+                <li><strong>SUB Y:</strong> Resta el valor de la posición Y al acumulador.</li>
+            </ul>
+            <h3>4. Máquina de Una Sola Dirección</h3>
+            <p>La Máquina Abacus se considera de una sola dirección porque las instrucciones y datos se almacenan en una única secuencia de memoria, avanzando linealmente a menos que una instrucción JUMP altere el flujo.</p>
+        </div>
+
+        <!-- Información desplegable para "Características de la Máquina Super Abacus" -->
+        <div id="info-super-abacus" class="info">
+            <h2>Características de la Máquina Super Abacus</h2>
+            <p>La Máquina Super Abacus es un modelo teórico de computadora de tercera generación que representa una evolución significativa en el uso de registros y capacidades de direccionamiento en comparación con la Máquina Abacus. Mientras que la Máquina Abacus utiliza un solo acumulador, la Super Abacus incorpora múltiples registros generales, lo que permite realizar operaciones aritméticas y lógicas más complejas de manera más eficiente.</p>
+            <h3>1. Uso de Registros Generales</h3>
+            <p>A diferencia de la Máquina Abacus, que tiene un único acumulador, la Máquina Super Abacus emplea varios registros para almacenar datos y realizar operaciones. Estos registros generales pueden ser utilizados tanto para almacenar valores intermedios como para efectuar cálculos sin necesidad de sobrescribir el valor almacenado en el acumulador principal. Esto permite un mayor control sobre las operaciones y una mayor flexibilidad en la ejecución de programas.</p>
+            <h3>2. Ciclo de Memoria</h3>
+            <p>El ciclo de memoria en la Super Abacus es más avanzado en comparación con su predecesora. Este ciclo permite que se realicen accesos más rápidos a los datos almacenados en memoria y se gestionen múltiples operaciones de manera simultánea. Esto se logra gracias a la utilización de registros adicionales y una mayor capacidad para realizar operaciones en paralelo.</p>
+            <h3>3. Diferencias con la Máquina Abacus</h3>
+            <ul>
+                <li><strong>Registros múltiples:</strong> Mientras que la Máquina Abacus solo tiene un acumulador, la Super Abacus utiliza varios registros para almacenar y procesar datos.</li>
+                <li><strong>Mayor capacidad de direccionamiento:</strong> La Máquina Super Abacus puede direccionar múltiples ubicaciones de memoria al mismo tiempo, lo que mejora la
